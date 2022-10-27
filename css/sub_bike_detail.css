@@ -1,0 +1,574 @@
+body {
+    background: #fff;
+}
+.innerBox {
+    /* background-color: rgba(255, 0, 0, 0.3); */
+}
+.size_wrap>span,
+.mySize,
+.down_arr,
+.cancleBtn,
+.cuponLink>p{
+    cursor: pointer;
+}
+/* banner */
+#bannerWrap {
+    position: relative;
+    margin: 0 auto;
+}
+.bannerImg {
+    width: 100%;
+    /* height: 20hv; */
+}
+.bannerImg img{
+    width: 100%;
+}
+.bannerText {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%,-50%);
+    color: #fff;  
+    font-weight: bold; 
+    font-size: 2em;
+}
+/* 본문 */
+#container{
+
+}
+.textElement{
+    margin: 50px 30px 20px;
+}
+/* section-1 */
+#product_info_wrapper{
+    border-top: 1px solid #ccc ;
+    margin-bottom: 50px;
+}
+.info_box{
+    display: flex;
+    justify-content: space-evenly;   
+}
+.info_box{
+    margin-top: 50px;
+}
+.bike_container_top{
+    position: relative;
+}
+.bike_slide_Wrap,
+.row>li{
+    background-color: #efefef;
+    box-sizing: border-box;
+}
+.bike_slide_Wrap{
+    border-radius:20px;
+    width: 600px;
+    height: 500px;
+    position: relative;
+    
+}
+.bike_slide_Wrap>li{
+    position: absolute;
+    padding: 20px;
+}
+.mySlide{
+    display: none;
+}
+.activeImg{
+    display: block;
+}
+.bike_slide_Wrap>li>img{
+    width: 100%;
+    height: 100%;
+}
+.row{
+    position: absolute;
+    right: 50%;
+    transform: translateX(50%);
+    display: flex;
+    margin: 10px 0 0;
+}
+.row>li{
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+    margin: 0 5px;
+    padding: 5px;
+    cursor: pointer;
+}
+.row>li>img{
+    width: 100%;
+    height: 100%;
+}
+/* 상품 정보 info_container */
+.info_container{
+    width: 500px;
+    position: relative;
+}
+.info_container>h2{
+    font-size: 2em;
+}
+.newMark{
+    background-color: #FA9042;
+    width: 60px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+}
+
+.product_pric_Wrap{
+    line-height: 3;
+}
+.product_pric_Wrap>.product_price{
+    float: left;
+    font-size: 1.5em;
+}
+.product_pric_Wrap>.bikeNum{
+    float: right;
+    font-size: 0.8em;
+    color: #666;
+}
+.cash_info>span{
+    display: block;
+}
+.cash_info>span>a{
+    font-size: 0.8em;
+    color: #666;
+    text-decoration: underline;
+}
+.free{
+    font-weight: bold;
+    line-height: 3;
+}
+.cuponLink{
+
+}
+.cuponLink>p{
+    font-size: 0.8em;
+    color: #666;
+    font-weight: bold;
+    text-indent: 10px;
+    background-color: #ddd;
+    width: 49.5%;
+    padding: 5px 0;
+}
+.cuponLink>p:first-child{
+    float: left;
+}
+.cuponLink>p:last-child{
+    float: right;
+
+}
+.option_wrap{
+    margin-top: 15px;
+   
+}
+.option_title{
+    color: #ccc;  
+    font-weight: bold;
+    line-height: 2;
+}
+.size_wrap>span{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ccc;
+    text-align: center;
+    line-height: 30px;
+    margin: 0 5px 0 0;
+}
+.mySize{
+    font-size: 0.9em;
+    text-decoration: underline;
+    font-weight: bold;
+    line-height: 2.5;
+}
+.color_size{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    font-weight: bold;
+}
+.color_list { /* 토글 */
+    border: 1px solid #ccc;
+    background-color: rgba(255,255,255,0.7);
+    padding: 10px 20px 0;
+    line-height: 1.8;
+    width: 100%;
+    height: 100px;
+    box-sizing: border-box;
+    overflow: auto;
+    display: none; /*색상 리스트 숨김*/
+}
+.color_list>li{
+   font-size: 0.9em;
+   cursor: pointer;
+}
+.selectColor{
+    background-color: #eee;
+    margin-top: 10px;    
+}
+.selectColor_name{
+    display: flex;
+    justify-content: space-between;
+    /* box-sizing: border-box;  */
+}
+.selectColor_name>p{
+    padding: 10px 20px 0 10px;
+    font-weight: bold;
+}
+.select_count{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 10px 10px 10px;
+}
+.minus,
+.plus{
+    background-color: #ddd;
+    cursor: pointer;
+}
+.select_count span{
+    border: 1px solid #bbb;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    font-size: 0.8em;
+}
+.select_count span:nth-child(2){
+    border-right: none;
+    border-left: none;
+}
+.priceAll{
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.priceLast{
+    position: absolute;
+    right: 0;
+    font-size: 1.8em;
+    color: #FA9042;
+    line-height: 2.5;
+}
+.cutomAdd{
+    display: flex;
+    margin-top: 60px;
+  
+}
+.cutomAdd>div{
+    width: 100%;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+    cursor: pointer;
+    padding: 0 5px;
+}
+
+.cutomAdd>div>p{
+    font-weight: bold;
+    font-size: 1.2em;
+   
+}
+.cutomBtn{
+
+}
+.cutomBtn>p{
+    position: relative;
+    background-color: white;
+    border: 1px solid #666;  
+}
+.cutomBtn>p>img{
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    left: 50px;
+}
+.addBtn>p{
+    background-color: #FA9042;
+    color: #fff;
+}
+
+
+
+/* 모바일 구매 버튼 */
+.mobile_button{
+    display: none;
+    position: relative;
+}
+.buttonWrap{
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    bottom: 0px;
+    right: 50%;
+    transform: translateX(50%);
+    background: #fff;
+    width: 100%;
+    padding: 20px 0 10px;
+}
+.buttonWrap>button{
+    margin: 0px 5px;
+    width: 120px;
+    height: 60px;
+    outline: none;
+    font-size: 0.95em;
+    font-weight: bold;
+}
+.showButton{
+    position: fixed;
+    bottom: 90px; /*버튼높이+padding*/
+    right: 50%;
+    transform: translateX(50%);
+    background-color: #fff;
+    padding: 0 20px;
+    z-index: 100;
+}
+.m_bell{
+    background-color: #fff;
+    border: 1px solid #FF0000;
+    color: #FF0000;
+}
+.m_cart{
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+.m_buy{
+    background: #292929;
+    color: white;
+}
+
+
+/* section-2 */
+#copy_banner{
+    position: relative;
+}
+.copy_banner>div{
+
+}
+.copy_banner_imgBox{
+    overflow: hidden;
+}
+.copy_banner_imgBox>img{
+    
+}
+.copy_banner_text{
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%,-50%);    
+    text-align: center;
+    line-height: 1.5;
+}
+.copy_banner_text>h2{
+    font-weight: bold;
+    font-size: 2em;
+}
+.copy_banner_text>p,
+.copy_banner_text>h2{
+    color: white;
+}
+.copyBtn{
+    padding-top: 10px;
+}
+.copyBtn>p{
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    border: 1px solid #fff;
+    margin: 0 auto;
+}
+.copyBtn>p>a{
+    color: white;
+}
+/* section-3 */
+.ditail_info_1{
+
+}
+.detail_titleBox{
+    margin: 80px 0;
+}
+.detail_titleBox>p{
+    text-align: center;
+}
+.infoTitle{
+    font-family: 'esamansu';
+    font-weight: bold;
+    font-size: 2em;
+    text-align: center;
+    position: relative;
+}
+.infoTitle::after{
+    content: "";
+    display: block;
+    width: 100px;
+    position: absolute;
+    right: 50%;
+    transform: translateX(50%);
+    border-bottom: 2px solid #ddd;
+}
+.infoWrap>li{
+    position: relative;
+    margin: 10px 0;
+}
+.infoImgBox{
+
+}
+.infoImgBox>div{
+    width: 100%;
+    height: 300px;
+    background-position: center center;
+    margin: 0 auto;
+    background-size: contain;
+}
+.infoImg1{
+    background: url(../images/infoImg1.jpg) no-repeat;
+}
+.infoImg2{
+    background: url(../images/infoImg2.jpg) no-repeat;
+}
+.infoImg3{
+    background: url(../images/infoImg3.jpg) no-repeat;
+}
+.infoTxtBox,
+.infoTxtBox_right{
+    position: absolute;
+    top: 50%;   
+    transform: translateY(-50%);
+    width: 500px;
+} 
+.infoTxtBox{
+    left: 10%;
+    color: #fff;
+}
+.infoTxtBox_right{
+    right: 10%;
+}
+.infoTxtBox_right p{
+    color: #000;
+}
+.iTitle{
+    font-size: 2em;
+    font-weight: bold;
+   padding-bottom: 20px;
+}
+.iTxt{
+    font-size: 1.1em;
+    word-break: keep-all;
+    line-height: 1.5;
+}
+.sample_bike{
+    margin: 100px 0;
+}
+.sm_titleBox{
+    margin: 80px 0 30px;
+}
+.sm_titleBox>p{
+    padding-top: 10px;
+    text-align: center;
+}
+.sm_titleBox span{
+    padding: 0 30px;
+    position: relative;
+}
+.redCircle::after,
+.skyCircle::after{
+    content: "";
+    display: block;
+    position: absolute;
+    left: 5px;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+.redCircle::after{
+    background-color: red;
+}
+.skyCircle::after{
+    background-color: skyblue;
+}
+.sample_bikeImg{
+    display: flex;
+    justify-content: center;
+}
+.sample_bikeImg img{
+     width: 300px;
+     padding: 0 30px;
+}
+.conBanner_imgBox{
+
+}
+.conBannerBox{
+    position: relative;
+
+}
+.conBanner_imgBox>img{
+    width: 100%;
+}
+.conBanner_textBox{
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%,-50%);
+    text-align: center;
+    color: #fff;
+    word-break: keep-all;
+    filter: drop-shadow(1px 1px 3px #333);
+}
+.conB_title{
+    color: #fff;
+    font-size: 2em;
+  
+}
+.conB_sub_title{
+    font-size: 1.5em;
+    font-weight: bold;
+    padding-bottom: 30px;
+}
+.conB_txt{
+    line-height: 1.5;
+    font-size: 0.8em;
+    width: 120%;
+}
+.framSize_table{
+    text-align: center;
+}
+table{
+    margin: 0 auto;
+    width: 80%;
+    height: 300px;
+    border-top: 2px solid #666;
+    border-bottom: 2px solid #666;
+    /* background-color: #fff; */
+}
+tr{
+    border: 1px solid #ddd;
+    border-right: none;
+    border-left: none;
+}
+tr:first-child td{
+    background: #ddd;
+    font-weight: bold;
+}
+td>p{
+    line-height: 1.5;
+}
+.add_product_wrapper{
+    margin: 100px 0 0;
+    border-top: 1px solid #666;
+}
+.add_product_wrapper>h2{
+    font-size: 1.5em;
+    padding: 50px 0;
+}
+.add_p_arrow{
+position: absolute;
+right: 0;
+}
+.add_product_wrapper>ul{
+    display: flex;
+}

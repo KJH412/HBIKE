@@ -8,6 +8,7 @@
     <!-- css -->
     <link rel="stylesheet" href="css/common.css">      
     <link rel="stylesheet" href="css/sub_bike_menu.css"> 
+    <link rel="stylesheet" href="css/sub_bike_detail.css">
     <!-- js -->
     <script src="js/jquery-3.6.1.min.js"></script>
 </head>
@@ -37,7 +38,7 @@
                 <nav>
                     <div class="mibileNav">
                         <div class="mibileNav">
-                            <div class="cartBtn"><a href="#void"><img src="images/" alt=""></a></div>
+                            <div class="cartBtn"><a href="#void"><img src="images/shopping-cart.svg" alt=""></a></div>
                             <div class="xBtn"><a href="#void"><img src="images/cancel.svg" alt="cancel button"></a></div>
                         </div>
                     </div>
@@ -52,7 +53,7 @@
                         <li>
                             <a href="#void">BIKES</a>
                             <ul class="sub">
-                                <li><a href="#void">로드</a></li>
+                                <li><a href="sub_bike.html">로드</a></li>
                                 <li><a href="#void">MTB</a></li>
                                 <li><a href="#void">트랙</a></li>
                                 <li><a href="#void">클래식</a></li>
@@ -103,7 +104,7 @@
     </header>
     <!-- banner -->
     <div id="bannerWrap">
-        <div class="bannerImg"><img src="images/" alt="서브페이지 배너 배경"></div>
+        <div class="bannerImg"><img src="images/sub_title_bg.jpg" alt="서브페이지 배너 배경"></div>
         <p class="bannerText">ROAD BIKES</p>
     </div>
     <!-- 본문 -->
@@ -112,10 +113,262 @@
             <p class="textElement">                
                 <a href="index.html">홈</a> &gt; BIKES &gt; ROAD BIKES
             </p>
-            <div class="bikeList_wrapper">
-
-            </div>
-
+            <!-- section-1 -->
+            <section id="product_info_wrapper">
+                <div class="info_box">
+                    <div class="bike_container_top">
+                        <ul class="bike_slide_Wrap">
+                            <li class="mySlide activeImg"><img src="images/images-Cycle-black.png" alt="black-main"></li>
+                            <li class="mySlide"><img src="images/images-Cycle-red.png" alt="red"></li>
+                            <li class="mySlide"><img src="images/images-Cycle-blue.png" alt="skyblue"></li>
+                        </ul>                              
+                        <ul class="row">
+                            <li class="colum"><img src="images/column-Cycle-black.png" alt="black"></li>
+                            <li class="colum"><img src="images/column-Cycle-red.png" alt="red"></li>
+                            <li class="colum"><img src="images/column-Cycle-skyblue.png" alt="skyblue"></li>
+                        </ul>
+                    </div>
+                    <div class="info_container">
+                        <p class="newMark">NEW</p>
+                        <h2>WAWS-PRO B</h2>
+                        <div class="product_pric_Wrap clearFix">
+                            <p class="product_price">￦ 800,000원</p>
+                            <p class="bikeNum">모델명 11235465</p>
+                        </div>
+                        <p class="cash_info">
+                            <span><a href="#void">스마일카드 최대 2% 캐시 적립</a></span>
+                            <span><a href="#void">현대카드 즉시할인 5% ~</a></span>
+                        </p>
+                        <p class="free">무료배송</p>
+                        <div class="cuponLink clearFix">
+                            <p>구매 전 적립금 5,000원 받기        ></p>
+                            <p>카드 무이자 혜택보기(최대6개월)    ></p>
+                        </div>
+                        <div class="option_wrap">
+                            <div class="size_wrap">
+                                <p class="option_title">SIZE</p>
+                                <span class="soldout">S</span><span>M</span><span class="soldout">L</span>
+                                <!-- 클릭-모달창 -->
+                                <p class="mySize">내 사이즈 찾아보기 ></p>
+                            </div>
+                            <div class="color_wrap">
+                                <p class="option_title">Color</p>
+                                <div class="color_size">
+                                    <p>색상</p>
+                                    <p class="down_arr"><img src="" alt="">▼</p>                                
+                                </div>
+                                <ul class="color_list slideUpDown">
+                                        <li>블랙S</li>
+                                        <li>블랙M</li>
+                                        <li>블랙L</li>
+                                        <li>레드S</li>
+                                        <li>레드M</li>
+                                        <li>레드L</li>
+                                        <li>스카이블루S</li>
+                                        <li>스카이블루M</li>
+                                        <li>스카이블루L</li>
+                                 </ul>                                                     
+                                <div class="selectColor">
+                                    <div class="selectColor_name">
+                                        <p>블랙M</p>
+                                        <p class="cancleBtn">x</p>
+                                    </div>
+                                    <div class="select_count">
+                                        <p>
+                                        <span class="minus">-</span><span>1</span><span class="plus">+</span>
+                                        </p>
+                                        <p class="priceAll">800,000원</p>
+                                    </div>
+                                </div>
+                                <h2 class="priceLast">총 800,000원</h2>
+                                <div class="cutomAdd">
+                                    <div class="cutomBtn">
+                                        <p><img src="images/icon_color_wheel.png" alt="">커스텀</p>
+                                    </div>
+                                    <div class="addBtn">
+                                        <p>ADD TO CART</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mobile_button">
+                    <div class="showButton">▲</div>
+                    <div class="buttonWrap">
+                        <button class="m_bell">종</button>
+                        <button class="m_cart">장바구니</button>
+                        <button class="m_buy">바로구매</button>
+                    </div>
+                </div>                
+            </section>
+            <!-- section-2 -->
+            <section id="copy_banner">
+                <div class="copy_banner_imgBox">
+                    <img src="images/sub_copy_banner.jpg" alt="banner">
+                </div>
+                <div class="copy_banner_text">
+                    <h2>더 큰 재미를 선사하는 하드테일</h2>
+                    <p>신제품 로스크를 타고 거친 지형으로 뛰어들어보세요.</p>
+                    <div class="copyBtn">
+                        <p><a href="#void">자세히 알아보기</a></p>
+                    </div>
+                </div>
+            </section>
+            <!-- section-3 -->
+            <section class="detail_info_wrapper">
+                <div class="ditail_info_1">
+                    <div class="detail_titleBox">
+                        <h2 class="infoTitle">DETAIL</h2>
+                        <p>슈퍼 라이트 올라운드 레이싱 바이크</p>
+                    </div>
+                    <ul class="infoWrap">
+                        <li>
+                            <div class="infoImgBox">
+                                <div class="infoImg1"></div>
+                            </div>
+                            <div class="infoTxtBox">
+                                <p class="iTitle">정밀한 제조 공정</p>
+                                <p class="iTxt">자체 EN 시험 장비를 통해 규정보다 최대 50% 더 
+                                    가혹한 조건으로 테스트를 실시하여 생산하고 있습니다.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="infoImgBox">
+                                <div class="infoImg2"></div>
+                            </div>
+                            <div class="infoTxtBox_right">
+                                <p class="iTitle">자체 제작 부품</p>
+                                <p class="iTxt">주요 부품은 자체적으로 설계, 제작하여 조립 됩니다. 
+                                    기능에 있어서 프레임과 올바른 조합을 이루며 이는 빠른 A/S 대응이 가능한 이유이기도 합니다.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="infoImgBox">
+                                <div class="infoImg3"></div>
+                            </div>
+                            <div class="infoTxtBox">
+                                <p class="iTitle">SEAT POST</p>
+                                <p class="iTxt">심플한 디자인 전립선안장<br> 장거리 라이딩의 피로를 줄여줄 전립선 안장 기본 장착</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="sample_bike">
+                        <div class="sm_titleBox">
+                            <h2 class="infoTitle">COLOR</h2>
+                            <p>
+                                <span class="redCircle">Red</span><span class="skyCircle">SkyBlue</span>
+                            </p>
+                        </div>
+                        <div class="sample_bikeImg">
+                         <img src="images/column-Cycle-red.png" alt="red bike">
+                         <img src="images/column-Cycle-skyblue.png" alt="skyblue bike">
+                        </div>
+                    </div>
+                    <div class="conBanner_wrapper">
+                        <div class="conBannerBox">
+                            <div class="conBanner_imgBox">
+                                <img src="images/conBanner.jpg" alt="배경">
+                            </div>
+                            <div class="conBanner_textBox">
+                                <h2 class="conB_title">강력한 힘을 유지할 수 있도록 설계된 포지션</h2>
+                                <p class="conB_sub_title">인체공학적이면서도 공기역학적인 라이딩 자세</p>
+                                <p class="conB_txt">더욱 짧아진 리치와 폭이 3cm 더 좁아진 후드가 포함되었고 정밀 점검을 거친 핸들바/스템이 더욱 편안한 인체공학적 라이딩 자세를 보장합니다. 
+                                    좁아진 후드 위치는 라이더의 항력을 크게 줄여 공기역학적 속도를 높이는 동시에 드롭의 제어를 유지함으로써 
+                                    폭발적인 스피드로 주행하는 순간에도 힘을 유지할 수 있습니다.
+                                </p>
+                            </div>
+                        </div>
+                    <div class="frameSize_wrapper">
+                        <div class="detail_titleBox">
+                            <h2 class="infoTitle">SIZE</h2>
+                            <p><img src="images/FDSS.jpg" alt=""></p>
+                        </div>
+                        <div class="framSize_table">
+                            <table>
+                                <tr>
+                                    <td>프레임사이즈</td>
+                                    <td><p>A</p> 시트튜브</td>
+                                    <td><p>B</p>탑튜브(수형)</td>
+                                    <td><p>C</p>헤드앵글</td>
+                                    <td><p>D</p>시트앵글</td>
+                                    <td><p>F</p>체인스테이</td>
+                                    <td><p>G</p>휠베이스</td>
+                                </tr>
+                                <tr>    
+                                    <td>440</td>
+                                    <td>440</td>
+                                    <td>500</td>
+                                    <td>70</td>
+                                    <td>75</td>
+                                    <td>405</td>
+                                    <td>972</td>
+                                </tr>
+                                <tr>
+                                    <td>470</td>
+                                    <td>470</td>
+                                    <td>510</td>
+                                    <td>70.5</td>
+                                    <td>74.5</td>
+                                    <td>405</td>
+                                    <td>974</td>
+                                </tr>
+                                <tr>
+                                    <td>510</td>
+                                    <td>510</td>
+                                    <td>545</td>
+                                    <td>72</td>
+                                    <td>73.5</td>
+                                    <td>405</td>
+                                    <td>986</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="add_product_wrapper">
+                        <h2>추가 옵션</h2>
+                        <div class="add_p_arrow">
+                            <img src="images/arrowleft.png" alt="">
+                            <img src="images/arrowright.png" alt="">
+                        </div>
+                        <ul>
+                            <li>
+                                <a href="#void">
+                                    <div><img src="images/helmet1.png" alt="helmet"></div>
+                                    <p class="add_p_name">HBHB-PRO 헬멧</p>
+                                    <p class="add_p_price">￦ 40,000원</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#void">
+                                    <div><img src="images/helmet2.png" alt="helmet"></div>
+                                    <p class="add_p_name">HBHB-PRO 헬멧</p>
+                                    <p class="add_p_price">￦ 40,000원</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#void">
+                                    <div><img src="images/helmet3.png" alt="helmet"></div>
+                                    <p class="add_p_name">HBHB-PRO 헬멧</p>
+                                    <p class="add_p_price">￦ 40,000원</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#void">
+                                    <div><img src="images/helmet4.png" alt="helmet"></div>
+                                    <p class="add_p_name">HBHB-PRO 헬멧</p>
+                                    <p class="add_p_price">￦ 40,000원</p>
+                                </a>
+                            </li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        <!-- innerBox 닫음 -->
         </div>
     </div>
     <!-- footer -->
