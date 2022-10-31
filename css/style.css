@@ -193,7 +193,8 @@ width: 170px;
     display: flex;
     position: relative;
     height: 100vh;
-    width: 300%;
+    /* width: 300%; */
+    width: 400%;
 }
 
 .banner .active {
@@ -203,7 +204,6 @@ width: 170px;
 .banner>li {
     text-align: center;
     height: 100%;
-    /* width: 33.3%; */
     flex: 1;
     position: relative;
 }
@@ -304,26 +304,22 @@ width: 170px;
     opacity: 1;
 }
 
-.arrowLeft {
+.arrowLeft{
     left: 50px;
 }
 
-.arrowRight {
+.arrowRight,
+.catearrowRight,
+.bikeArrowRight{
     right: 50px;
 }
 
 /* pager */
-.pager,
-.categoryPager,
-.bikePager {
+.pager {
     position: absolute;
     text-align: center;   
     right: 50%;
     transform: translateX(50%);   
-}
-.categoryPager,
-.bikePager {
-    padding-top: 50px;
 }
 #mainBanner>.pager{
     padding-top: 0px;
@@ -335,20 +331,10 @@ width: 170px;
 .pager>.pager_active>a{
     background: #fff;
 }
-.bikePager>span>a,
-.categoryPager>span>a{
-    background: #aba8a8;
-}
-.bikePager>.active_or>a,
-.categoryPager>.active_or>a{
-    background: #E55D1A;
-}
 .pager>span>a{
     background: rgba(255, 255, 255, 0.4);
 }
-.pager>span>a,
-.bikePager>span>a,
-.categoryPager>span>a {
+.pager>span>a{
     height: 10px;
     width: 50px;
     display: inline-block;
@@ -448,10 +434,10 @@ width: 170px;
 .categoryList {
     display: flex;
     /* overflow: hidden; */
-    width: 280%;
+    /* width: 280%; */
 }
 .category>ul>li{
-    width: 12%;
+    /* width: 12%; */
     /* right: -12.5%; */
     /* width: 20%; */
     left: 0;
@@ -625,6 +611,8 @@ video{
 .bikeImg{
     width: 900px;
     height: 600px;
+    margin: 0 auto;
+    position: relative;
 }
 .bikeImg img{
     width: 100%;
@@ -637,13 +625,6 @@ video{
     text-align: center;
     padding-top: 20px;
     font-weight: bold;
-}
-.bikePager{
-    padding-top: 20px;
-}
-.bikeWrap>.arrowWrap{
-    position: relative;
-    bottom: 35%;   
 }
 
 /* customWrap */
@@ -733,15 +714,14 @@ address{
     font-weight: bold;
 }
 
-/* 반응형 */
-@media screen and (hover:hover) {
-    .sub{
-        /* background: none; */
-    }
-}         
+/* 반응형 */        
 @media screen and (max-width: 1270px) {
     header{
-        /* position: flexd; */
+        position: fixed;
+        right: 50%;
+        transform: translateX(50%);
+        width: 100%;
+        z-index: 10000;
     }
     .headTop{
         display: none;
@@ -805,7 +785,7 @@ address{
     }
     .textBox{
         left: 50px;
-        top: 50px;
+        top: 100px;
     }
     .textBox>.new {
         font-size:0.8em;
@@ -876,9 +856,6 @@ address{
         /* bikeWrap */
         .bikeWrap{
             height: 80vh;
-        }
-        .bikeWrap>.arrowWrap {
-            bottom: 25.5%;
         }
         .bikeImg {
             width: 600px;
@@ -1048,10 +1025,7 @@ address{
         }
         .bikeWrap {
             height: 60vh;
-        }
-        .bikeWrap>.arrowWrap{
-            opacity: 0;
-        }    
+        } 
         .bikeImg {
             width: 300px;
             height: 200px;
@@ -1070,4 +1044,5 @@ address{
         }
         .signBtn {
             width: 240px;
+        }
     }

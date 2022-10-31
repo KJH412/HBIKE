@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+   <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -23,8 +23,34 @@
     <script src="js/jquery-3.6.1.min.js"></script>
     <script src="js/jquery.js"></script>
     <script src="js/javascript.js"></script>
+    <script src="js/banner.js"></script>
+    <!-- bxSlider -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.js"></script>
+    <style>
+        .bx-wrapper {
+            border:0;
+            background:none;
+            box-shadow:none;
+            margin-top: 30px;
+        }
+        .bx-wrapper .bx-next {
+            right: 10%;
+        }
+        .bx-wrapper .bx-prev {
+             left: 10%;
+        }
+    </style>  
+    <script>
+            $(document).ready(function(){
+                $('.slider').bxSlider({
+                    auto:true,
+                    minSlides: 1
+                });
+            });
+    </script>
 </head>
-
 <body>
     <div class="upBtn">
         <a href="#">
@@ -55,8 +81,8 @@
                 <h1 class="logo"><a href="#void"><img src="images/logo.png" alt="logo"></a></h1>
                 <nav>
                     <div class="mibileNav">                        
-                        <div class="cartBtn"><a href="#void"><img src="images/" alt="카트"></a></div>
-                        <div class="xBtn"><a href="#void"><img src="images/" alt="닫기"></a></div>
+                        <!-- <div class="cartBtn"><a href="#void"><img src="images/" alt="카트"></a></div> -->
+                        <div class="xBtn"><a href="#void"><img src="images/cancel.svg" alt="cancel button"></a></div>
                     </div>
                     <ul id="nav">
                         <li>
@@ -67,9 +93,9 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="#void">BIKES</a>
+                            <a href="#void" style="color:red;">BIKES</a>
                             <ul class="sub">
-                                <li><a href="sub_bike.html">로드</a></li>
+                                <li><a href="sub_bike.html" style="color:red;">로드</a></li>
                                 <li><a href="#void">MTB</a></li>
                                 <li><a href="#void">트랙</a></li>
                                 <li><a href="#void">클래식</a></li>
@@ -138,8 +164,8 @@
                     <img src="images/mainbanner2.jpg" alt="/mainbanner_1">
                 </a>
                     <div class="textBox">
-                        <p class="new">2023 NEW</p>
-                        <p class="mainText">대한민국 대표 산악자전거</p>
+                        <p class="new">2022 BEST</p>
+                        <p class="mainText">트렉 역대 가장 빠른 로드 바이크</p>
                         <p class="subText">산과 험로에서 안정적인 주행이 가능한 오프로드</p>
                         <div class="bannerMore"><a href="#void">자세히보기</a></div>
                     </div>
@@ -149,8 +175,8 @@
                     <img src="images/mainbanner3.jpg" alt="/mainbanner_1">
                 </a>
                     <div class="textBox">
-                        <p class="new">2024 NEW</p>
-                        <p class="mainText">대한민국 대표 산악자전거</p>
+                        <p class="new">2022 NEW</p>
+                        <p class="mainText">대한민국 대표 로드자전거</p>
                         <p class="subText">산과 험로에서 안정적인 주행이 가능한 오프로드</p>
                         <div class="bannerMore"><a href="#void">자세히보기</a></div>
                     </div>
@@ -259,15 +285,8 @@
                         </li>
                     </ul>
                     <div class="arrowWrap">
-                        <div class="arrowRight"><a href="#void"><img src="images/arrowright.png" alt="화살표오른쪽"></a></div>
-                        <div class="arrowLeft"><a href="#void"><img src="images/arrowleft.png" alt="화살표왼쪽"></a></div>
-                    </div>
-                    <div class="categoryPager">
-                        <span class="active_or"><a href="#void">1</a></span>
-                        <span><a href="#void">2</a></span>
-                        <span><a href="#void">3</a></span>
-                        <span><a href="#void">4</a></span>
-                        <span><a href="#void">5</a></span>
+                        <div class="catearrowRight"><a href="#void"><img src="images/arrowright.png" alt="화살표오른쪽"></a></div>
+                        <div class="catearrowLeft"><a href="#void"><img src="images/arrowleft.png" alt="화살표왼쪽"></a></div>
                     </div>
                 </section>
             </div>
@@ -302,10 +321,11 @@
         <div class="bikeWrap">
             <h2 class="conTitle">ROAD BIKES</h2>
             <p>위대한 유산을 바탕으로 새로운 기준을 세우는 스피드를 선보입니다. </p>
-            <ul class="bikeList">
+            <!-- <ul class="bikeList"> -->
+            <ul class="slider">
                 <li>
-                    <div class="tag">2022 BEST BIKE</div>
                     <div class="bikeImg">
+                        <div class="tag">2022 BEST BIKE</div>
                         <a href="#void"><img src="images/best_bike_list1.jpg" alt=""></a>
                     </div>
                     <div class="bikeText">
@@ -313,8 +333,8 @@
                     </div>
                 </li>
                 <li class="activeShow">
-                    <div class="tag">2022 BEST BIKE</div>
                     <div class="bikeImg">
+                        <div class="tag">2022 BEST BIKE</div>
                         <a href="#void"><img src="images/best_bike_list2.jpg" alt=""></a>
                     </div>
                     <div class="bikeText">
@@ -322,8 +342,8 @@
                     </div>
                 </li>
                 <li>
-                    <div class="tag">2022 BEST BIKE</div>
                     <div class="bikeImg">
+                        <div class="tag">2022 BEST BIKE</div>
                         <a href="#void"><img src="images/best_bike_list3.jpg" alt=""></a>
                     </div>
                     <div class="bikeText">
@@ -331,15 +351,6 @@
                     </div>
                 </li>
             </ul>
-            <div class="arrowWrap">
-                <div class="arrowRight"><a href="#void"><img src="images/arrowright.png" alt="화살표오른쪽"></a></div>
-                <div class="arrowLeft"><a href="#void"><img src="images/arrowleft.png" alt="화살표왼쪽"></a></div>
-            </div>
-            <div class="bikePager">
-                <span><a href="#void">1</a></span>
-                <span class="active_or"><a href="#void">2</a></span>
-                <span><a href="#void">3</a></span>
-            </div>
         </div>
         <!-- 컬러커스텀 -->
         <div class="customWrap">

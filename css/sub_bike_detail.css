@@ -32,6 +32,25 @@ body {
     font-weight: bold; 
     font-size: 2em;
 }
+/* 모달창 */
+.modal{
+    display: none;
+    position: fixed;
+    z-index: 100;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.grayLayer{
+    display: none;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+}
 /* 본문 */
 #container{
 
@@ -69,6 +88,8 @@ body {
 .bike_slide_Wrap>li{
     position: absolute;
     padding: 20px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 .mySlide{
     display: none;
@@ -119,6 +140,7 @@ body {
 
 .product_pric_Wrap{
     line-height: 3;
+    position: relative;
 }
 .product_pric_Wrap>.product_price{
     float: left;
@@ -128,6 +150,10 @@ body {
     float: right;
     font-size: 0.8em;
     color: #666;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
 }
 .cash_info>span{
     display: block;
@@ -169,6 +195,9 @@ body {
     font-weight: bold;
     line-height: 2;
 }
+.size_wrap{
+
+}
 .size_wrap>span{
     display: inline-block;
     width: 30px;
@@ -177,6 +206,19 @@ body {
     text-align: center;
     line-height: 30px;
     margin: 0 5px 0 0;
+    position: relative;
+    overflow: hidden;    
+}
+.soldout::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(-50%,-50%) rotate(45deg);
+    display: block;
+    width: 1px;
+    height: 50px;
+    background: #ccc;
 }
 .mySize{
     font-size: 0.9em;
@@ -199,8 +241,11 @@ body {
     width: 100%;
     height: 100px;
     box-sizing: border-box;
-    overflow: auto;
-    display: none; /*색상 리스트 숨김*/
+    overflow: auto;   
+    display: none;
+}
+.cl_on{
+    display: block; /*색상 리스트 숨김*/
 }
 .color_list>li{
    font-size: 0.9em;
@@ -309,6 +354,7 @@ body {
     background: #fff;
     width: 100%;
     padding: 20px 0 10px;
+    border-top: 1px solid #ddd;
 }
 .buttonWrap>button{
     margin: 0px 5px;
@@ -326,6 +372,9 @@ body {
     background-color: #fff;
     padding: 0 20px;
     z-index: 100;
+    border: 1px solid #ddd;
+    border-bottom: none;
+    cursor: pointer;
 }
 .m_bell{
     background-color: #fff;
@@ -362,6 +411,7 @@ body {
     transform: translate(50%,-50%);    
     text-align: center;
     line-height: 1.5;
+    width: 100%;
 }
 .copy_banner_text>h2{
     font-weight: bold;
@@ -374,12 +424,19 @@ body {
 .copyBtn{
     padding-top: 10px;
 }
+.copyBtn:hover p{
+    background: #fff;  
+}
+.copyBtn:hover p>a{
+    color: #000;  
+}
 .copyBtn>p{
     width: 200px;
     height: 40px;
     line-height: 40px;
     border: 1px solid #fff;
     margin: 0 auto;
+    transition: 0.3s;
 }
 .copyBtn>p>a{
     color: white;
@@ -467,7 +524,7 @@ body {
     margin: 80px 0 30px;
 }
 .sm_titleBox>p{
-    padding-top: 10px;
+    padding-top: 20px;
     text-align: center;
 }
 .sm_titleBox span{
@@ -497,7 +554,7 @@ body {
 }
 .sample_bikeImg img{
      width: 300px;
-     padding: 0 30px;
+     padding: 0 30px;    
 }
 .conBanner_imgBox{
 
@@ -565,10 +622,145 @@ td>p{
     font-size: 1.5em;
     padding: 50px 0;
 }
-.add_p_arrow{
-position: absolute;
-right: 0;
+
+.add_p_name,
+.add_p_price{
+    text-align: center;
 }
-.add_product_wrapper>ul{
-    display: flex;
+/* 반응형 */
+@media screen and (max-width: 1270px) {
+    .info_container{
+        width: 30%;
+    }
+    .infoTxtBox {
+        left: 3%;
+    }
+    .infoTxtBox_right{
+        right: 3%;
+    }  
+    .conB_txt {
+        width: 100%;
+    }
+    .conBannerBox{
+        display: none;
+    }
+
+}
+@media screen and (max-width: 1000px) {
+    .mobile_button{
+        display: block;
+        z-index: 10;
+    }
+    .color_wrap{
+        z-index: 11;
+    }
+    .cutomAdd{
+        display: none;
+    }
+    .row{
+        display: none;
+    }
+    .info_box{
+        display: block;
+    }
+    .info_container{
+        width: 90%;
+      position: static;
+      margin: 50px auto;
+    }
+    .infoImgBox>div {
+        background-size: 100% auto;
+    }
+    .infoTxtBox{
+
+    }
+    .infoTxtBox_right {
+
+    }
+    .infoTxtBox, .infoTxtBox_right {
+        text-align: center;
+      
+    }
+    .bike_slide_Wrap{
+        margin: 0 auto;
+    }
+    .bike_container_top{
+     
+    }
+    .priceLast{
+        position: static;
+    }
+    .mySize{
+        display: inline-block;
+
+    }
+    .copy_banner_text>h2 {
+        font-size: 1.3em;
+    }
+    .copy_banner_text>p{
+        font-size: 0.8em;
+    }
+    .infoImgBox>div {
+        margin: 0 auto 250px;
+    }
+    .infoImg1 {
+        background: url(../images/infoImg1mobile.jpg) no-repeat ;
+      
+    }
+    .infoImg2 {
+        background: url(../images/infoImgmobile2.jpg) no-repeat ;
+      
+    }
+    .infoImg3 {
+        background: url(../images/infoImg3mobile.jpg) no-repeat ;
+      
+    }
+    .infoTxtBox, .infoTxtBox_right{
+        left: 0;
+        top: unset;
+        position: absolute;
+        bottom: -100px;
+        transform: translateY(50%);
+        width: 100%;
+    }
+    .infoTxtBox{
+        color: #000;
+    }
+    
+}
+@media screen and (max-width: 767px) {
+    .cuponLink {
+        display: none;
+    }
+    .option_wrap {
+        margin-top: 0
+    }
+    .sample_bikeImg{
+        display: block;
+        text-align: center;
+    }
+    .detail_titleBox {
+        margin: 80px 0 0;
+    }
+    .detail_titleBox>p{
+        width: 200px;
+        margin: 0 auto;
+    }
+    .detail_titleBox>p>img{
+        width: 100%;
+    }
+    tr:first-child td{
+        font-size: 0.6em;
+    }
+
+}
+@media screen and (max-width: 648px) {
+    .bike_slide_Wrap {
+        width: 90%;
+    }
+}
+@media screen and (max-width: 468px) {
+    .bike_slide_Wrap {
+        height: 350px;
+    }
 }

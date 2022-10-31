@@ -11,14 +11,47 @@
     <link rel="stylesheet" href="css/sub_bike_detail.css">
     <!-- js -->
     <script src="js/jquery-3.6.1.min.js"></script>
+    <script src="js/javascript.js"></script>
+    <script src="js/jquery.js"></script>
+     <!-- bxSlider -->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.css">
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.js"></script>
+     <style>
+         .bx-wrapper {
+             border:0;
+             background:transparent;
+             box-shadow:none;
+         }
+     </style>  
+     <script>
+        $(document).ready(function(){
+            $('.addSlide').bxSlider({    
+                auto:true,           
+                minSlides: 2,
+                maxSlides: 4,
+                slideWidth: 350
+            });
+        });
+     </script>
 </head>
-<body>
+<body> 
+    <div class="upBtn">
+        <a href="#">
+            <img src="images/arrowtoUp.png" alt="스크롤업버튼">
+        </a>
+    </div>
+    <!-- 모달창 -->
+    <div class="grayLayer"></div>
+    <div class="modal">
+        <img src="images/modal.jpg" alt="모달창">
+    </div>
      <!-- header -->
      <header>
         <div class="headTop">
             <div class="innerBox">
                 <div class="leftGnb">
-                    <form>
+                    <form class="searchForm">
                         <input type="search">
                         <a href="#void"><img src="images/icon_serch.png" alt="돋보기 아이콘"></a>
                     </form>
@@ -196,7 +229,7 @@
                 <div class="mobile_button">
                     <div class="showButton">▲</div>
                     <div class="buttonWrap">
-                        <button class="m_bell">종</button>
+                        <button class="m_bell"><img src="images/bell.svg" alt="알림"></button>
                         <button class="m_cart">장바구니</button>
                         <button class="m_buy">바로구매</button>
                     </div>
@@ -331,7 +364,7 @@
                             <img src="images/arrowleft.png" alt="">
                             <img src="images/arrowright.png" alt="">
                         </div>
-                        <ul>
+                        <ul class="addSlide">
                             <li>
                                 <a href="#void">
                                     <div><img src="images/helmet1.png" alt="helmet"></div>
@@ -360,10 +393,34 @@
                                     <p class="add_p_price">￦ 40,000원</p>
                                 </a>
                             </li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
+                            <li>
+                                <a href="#void">
+                                    <div><img src="images/glove1.png" alt=""></div>
+                                    <p class="add_p_name">HBHB-PRO 장갑</p>
+                                    <p class="add_p_price">￦ 40,000원</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#void">
+                                    <div><img src="images/glove2.png" alt=""></div>
+                                    <p class="add_p_name">HBHB-PRO 장갑</p>
+                                    <p class="add_p_price">￦ 40,000원</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#void">
+                                    <div><img src="images/glove3.png" alt=""></div>
+                                    <p class="add_p_name">HBHB-PRO 장갑</p>
+                                    <p class="add_p_price">￦ 40,000원</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#void">
+                                    <div><img src="images/glove4.png" alt=""></div>
+                                    <p class="add_p_name">HBHB-PRO 장갑</p>
+                                    <p class="add_p_price">￦ 40,000원</p>
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </div>

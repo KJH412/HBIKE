@@ -19,10 +19,11 @@
     <!-- css -->
     <link rel="stylesheet" href="css/common.css">    
     <link rel="stylesheet" href="css/sub_bike_menu.css">
-     <!-- js -->
-     <script src="js/jquery-3.6.1.min.js"></script>
-     <script src="js/jquery.js"></script>
-     <script src="js/main.js"></script>
+    <!-- js -->
+    <script src="js/jquery-3.6.1.min.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/javascript.js"></script>
+    <script src="js/subBanner_jquery.js"></script>  
 </head>
 <body>
     <div class="upBtn">
@@ -35,7 +36,7 @@
         <div class="headTop">
             <div class="innerBox">
                 <div class="leftGnb">
-                    <form>
+                    <form class="searchForm">
                         <input type="search">
                         <a href="#void"><img src="images/icon_serch.png" alt="돋보기 아이콘"></a>
                     </form>
@@ -50,12 +51,12 @@
             </div>
         </div>
         <div class="headBottom">
-            <div class="innerBox">
+            <div class="innerBox hB">
                 <h1 class="logo"><a href="index.html"><img src="images/logo.png" alt="logo"></a></h1>
                 <nav>
                     <div class="mibileNav">
                         <div class="mibileNav">
-                            <div class="cartBtn"><a href="#void"><img src="images/" alt=""></a></div>
+                            <!-- <div class="cartBtn"><a href="#void"><img src="images/" alt=""></a></div> -->
                             <div class="xBtn"><a href="#void"><img src="images/cancel.svg" alt="cancel button"></a></div>
                         </div>
                     </div>
@@ -126,33 +127,27 @@
                 <a href="#void">
                     <img src="images/bike_banner1.jpg" alt="banner_1">
                 </a>
-                <!-- <div class="innerBox"> -->
-                    <div class="textBox innerBox">
-                        <p>BEST BIKE IN THW WORLD</p>
-                        <div class="bannerMore"><a href="#void">VEIW MORE</a></div>
-                    </div>
-                <!-- </div> -->
-            </li>
-            <li>
-                <a href="#void">
-                    <img src="images/bike_banner1.jpg" alt="banner_1">
-                </a>
-                <div class="innerBox">
-                    <div class="textBox">
-                        <p>BEST BIKE IN THW WORLD</p>
-                        <div class="bannerMore"><a href="#void">VEIW MORE</a></div>
-                    </div>
+                <div class="textBox innerBox">
+                    <p>BEST BIKE IN THE WORLD</p>
+                    <div class="bannerMore"><a href="#void">VEIW MORE</a></div>
                 </div>
             </li>
             <li>
                 <a href="#void">
-                    <img src="images/bike_banner1.jpg" alt=/banner_1">
+                    <img src="images/bike_banner2.jpg" alt="banner_2">
                 </a>
-                <div class="innerBox">
-                    <div class="textBox">
-                        <p>BEST BIKE IN THW WORLD</p>
-                        <div class="bannerMore"><a href="#void">VEIW MORE</a></div>
-                    </div>
+                <div class="textBox innerBox">
+                    <p>BEST BIKE IN THE WORLD</p>
+                    <div class="bannerMore"><a href="#void">VEIW MORE</a></div>
+                </div>
+            </li>
+            <li>
+                <a href="#void">
+                    <img src="images/bike_banner3.jpg" alt="banner_3">
+                </a>
+                <div class="textBox innerBox">
+                    <p>BEST BIKE IN THE WORLD</p>
+                    <div class="bannerMore"><a href="#void">VEIW MORE</a></div>
                 </div>
             </li>
         </ul>
@@ -160,16 +155,11 @@
             <div class="arrowRight"><a href="#void"><img src="images/arrowright.png" alt="arrowright"></a></div>
             <div class="arrowLeft"><a href="#void"><img src="images/arrowleft.png" alt="arrowleft"></a></div>
         </div>
-        <div class="pager">
-            <span class="pager_active"><a href="#void">1</a></span>
-            <span><a href="#void">2</a></span>
-            <span><a href="#void">3</a></span>
-        </div>
     </div>
     <!-- #container -->
     <div id="container">
         <ul class="conNav">
-            <li class="conNav_active"><a href="#void" class="dark">ROAD BIKES</a></li>
+            <li class="conNav_active"><a href="#void">ROAD BIKES</a></li>
             <li><a href="#void">MTB</a></li>
             <li><a href="#void">클래식</a></li>
             <li><a href="#void">트랙</a></li>
