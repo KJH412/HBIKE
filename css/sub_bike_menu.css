@@ -10,6 +10,7 @@ body {
     /* background-color: rgba(255, 0, 0, 0.3); */
     position: relative;
 }
+
 .hamBtn{
     position: absolute;
     top: 20px;
@@ -148,7 +149,7 @@ width: 170px;
     color: #eee;
     font-size: 1.1em;
 }
-#nav>li.color>a{
+#nav>li.orangeColor>a{
     color:#FF7713;
 }
 #nav:hover .sub{
@@ -192,6 +193,8 @@ width: 170px;
     position: relative;
     /* width: 300%; */
     flex: 1;
+    /* height: 100%; */
+
 }
 
 .banner .active {
@@ -201,7 +204,7 @@ width: 170px;
 .banner>li {
     /* flex: 1; */
     height: 100%;
-    width: 100%;
+    /* width: 100%; */
     position: relative;
 }
 
@@ -210,7 +213,7 @@ width: 170px;
 }
 
 .banner>li>a>img {
-
+    height: 100%;
 }
 
 /* 배너 텍스트 */
@@ -360,7 +363,7 @@ width: 170px;
     color: #f74b16;
     font-size: 1.5em;
     position: relative;
-    left: 30px;
+    padding-left: 30px;
     animation-name: clickText;
     animation-direction:alternate-reverse;
     animation-duration: 1s;
@@ -418,10 +421,12 @@ width: 170px;
     font-size: 1.2em;
 }
 .color{
-    display: flex;
-    justify-content: center;
+    /* display: block; */
+    /* display: flex;
+    justify-content: center; */
 }
 .color>span{
+    display: inline-block;
     width: 20px;
     height: 20px;
     border-radius: 50%;   
@@ -508,9 +513,11 @@ address{
 
 /* 반응형 */
 @media screen and (max-width: 1270px) {
+    /* header */
     header{
         position: fixed;
         right: 50%;
+        top: 0;
         transform: translateX(50%);
         width: 100%;
         z-index: 10000;
@@ -581,6 +588,7 @@ address{
     .textBox>.mainText {
         /* font-size: 2em; */
     }
+  
     /* ourWrap */
     .conTitle{
         font-size: 2em;

@@ -27,7 +27,7 @@ $(function () {
             $('.sub').stop().slideUp();
             $(this).parent().find('.sub').stop().slideToggle();
             
-            $(this).parent().toggleClass("color").siblings().removeClass("color");
+            $(this).parent().toggleClass("orangeColor").siblings().removeClass("orangeColor");
         }
     });
 
@@ -38,7 +38,7 @@ $(function () {
         "mouseenter": function () {
             if (winWidth > 1270) {
                 $(".sub").css("height","300px");
-                $(this).addClass("color").siblings().removeClass("color");
+                $(this).addClass("orangeColor").siblings().removeClass("orangeColor");
                 $('.sub').stop().slideDown(500);
             }
             else {
@@ -50,61 +50,62 @@ $(function () {
     $("nav").on("mouseleave", function () {
         if (winWidth > 1270) {
             $(this).find('.sub').stop().slideUp(500);
-            $("#nav>li").removeClass("color");
+            $("#nav>li").removeClass("orangeColor");
             // $('.sub>li').animate({ display: 'block' }, 500)
         }
         else {
             // $(this)
         }
     })
-
-
-    //-------------------PRODUCT CATEGORY-------------------
    
-    // let ulcate =  $('.categoryList') ul
-    let cateliWidh = $('.categoryList>li').width();
+    //-------------------PRODUCT CATEGORY-------------------
     let cateliLeng = $('.categoryList>li').length;
     let nowNum = 0;
+    let maxNum = 0;
+    //section의 크기
+    let cateliWidth = $('.categoryList>li').width();
+    let secWidth = $('.category').width();
     
-    //오른쪽 // 리사이즈 사이즈별로 nowNum체크
-    $('.catearrowRight').on("click",function(){  
-        console.log("카테고리 오른쪽");
-        if(winWidth>1270){
-            if(nowNum < 2){
-                nowNum++;
-                $('.categoryList>li').stop().animate({"left": -cateliWidh*nowNum + "px"});
-            }else{
-                console.log(nowNum);
-                return false;
-            }            
-        }else if(winWidth<=1270){
-            if(nowNum < 3){
-                nowNum++;
-                $('.categoryList>li').stop().animate({"left": -cateliWidh*nowNum + "px"});
-            }else{
-                return false;
-            }  
-        }else if(winWidth<500){
-            if(nowNum < 4){
-                nowNum++;
-                $('.categoryList>li').stop().animate({"left": -cateliWidh*nowNum + "px"});
-            }else{
-                return false;
-            }  
-        }
-    })
-    // 왼쪽
+    let num = Math.round(secWidth / cateliWidth);
+    maxNum = cateliLeng - num;
+    
+    //원도우 resize시 넓이를 다시 측정.
+    $(window).resize(function(){
+        $('.categoryList>li').stop().css({"left": 0 + "px"});
+        nowNum = 0; //초기화
+        maxNum = 0;
+        
+        //section의 크기
+        cateliWidth = $('.categoryList>li').width();
+        secWidth = $('.category').width();    
+        
+        num = Math.round(secWidth / cateliWidth);
+        maxNum = cateliLeng - num;
+    }); 
+    
+    $('.catearrowRight').on("click",function(){
+        if(nowNum < maxNum){
+            nowNum++;
+            $('.categoryList>li').stop().animate({"left": -cateliWidth*nowNum + "px"});
+        }        
+    });
+    
     $('.catearrowLeft').on("click",function(){  
         if(nowNum == 0){ 
             return false;
         }
         else{
             nowNum--;
-            $('.categoryList>li').stop().animate({"left": -cateliWidh*nowNum + "px"});
+            $('.categoryList>li').stop().animate({"left": -cateliWidth*nowNum + "px"});
         }
-    })
-
+    });
     
+
+
+
+
+
+
     //서브페이지1 ---------------------------------------------------------
     
     $('.conNav>li').on("click",function(){

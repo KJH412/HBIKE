@@ -40,17 +40,17 @@ $(function () {
             clearInterval(rolling);
         },
         "mouseout":function(){
-            rolling = setInterval(function(){
-                rightArrow.trigger("click");
+            // rolling = setInterval(function(){
+            //     rightArrow.trigger("click");
                 
-            },4000)
+            // },4000)
         }
     })  
 
-    rolling = setInterval(function(){
-        rightArrow.trigger("click");
+    // rolling = setInterval(function(){
+    //     rightArrow.trigger("click");
         
-    },4000)
+    // },4000)
   
     rightArrow.on("click", function () {
         banner.stop().animate({ "left": -liWidth + "px" }, function () {

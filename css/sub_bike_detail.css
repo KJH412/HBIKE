@@ -242,10 +242,10 @@ body {
     height: 100px;
     box-sizing: border-box;
     overflow: auto;   
-    display: none;
+    display: block;
 }
 .cl_on{
-    display: block; /*색상 리스트 숨김*/
+    display: none; /*색상 리스트 숨김*/
 }
 .color_list>li{
    font-size: 0.9em;
@@ -629,6 +629,18 @@ td>p{
 }
 /* 반응형 */
 @media screen and (max-width: 1270px) {
+    /* 배너 */
+    #bannerWrap {
+        top: 70px;
+    }
+    #container {
+        position: relative;
+        top: 70px; margin-bottom: 70px;
+    }
+    .bannerText{
+        font-size: 1.5em;
+    }
+    
     .info_container{
         width: 30%;
     }
@@ -658,7 +670,7 @@ td>p{
         display: none;
     }
     .row{
-        display: none;
+        /* display: none; */
     }
     .info_box{
         display: block;
@@ -666,7 +678,7 @@ td>p{
     .info_container{
         width: 90%;
       position: static;
-      margin: 50px auto;
+      margin: 100px auto 50px;
     }
     .infoImgBox>div {
         background-size: 100% auto;

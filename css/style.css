@@ -149,7 +149,7 @@ width: 170px;
     color: #eee;
     font-size: 1.1em;
 }
-#nav>li.color>a{
+#nav>li.orangeColor>a{
     color:#FF7713;
 }
 #nav:hover .sub{
@@ -840,7 +840,7 @@ address{
         }
         /* category */
         .categoryList>li>.c_imgBox {
-            filter: none;
+            filter: brightness(0.9);
         }
         .c_textBox{
             opacity: 1;
