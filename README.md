@@ -10,7 +10,7 @@
 - 기획 및 구현 2주 소요
 
 ### 제작페이지
-- 메인페이지 <a>https://kjh412.github.io/Portfolio2/</a>
+- 메인페이지 <a>https://kjh412.github.io/Portfolio2/index.html</a>
 - 서브페이지1 (ROAD BIKES 상품 페이지) <a>https://kjh412.github.io/Portfolio2/sub_bike.html</a>
 - 서브페이지2 (상품 상세 페이지) <a>https://kjh412.github.io/Portfolio2/sub_bike_detail.html</a>
 
