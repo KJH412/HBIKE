@@ -11,8 +11,8 @@
 
 ### 제작페이지
 - <a href="https://kjh412.github.io/HBIKE/">메인페이지</a>
-- 서브페이지1 (ROAD BIKES 상품 페이지) <a>https://kjh412.github.io/Portfolio2/sub_bike.html</a>
-- 서브페이지2 (상품 상세 페이지) <a>https://kjh412.github.io/Portfolio2/sub_bike_detail.html</a>
+- <a href="https://kjh412.github.io/HBIKE/sub_bike.html">서브페이지1(ROAD BIKES 상품 페이지)</a>
+- <a href="https://kjh412.github.io/HBIKE/sub_bike_detail.html">서브페이지2(상품 상세 페이지)</a>
 
 ### 작업
 - HTML5
